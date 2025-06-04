@@ -1,0 +1,16 @@
+# dependencies
+node_modules/
+
+# CSS 
+assets/css/app.css
+assets/css/app.css.map
+assets/css/style.css
+assets/css/style.css.map
+
+# JS
+assets/js/app.js
+assets/js/app.js.map
+
+# misc
+npm-debug.log
+yarn-error.log

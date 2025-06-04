@@ -1,0 +1,130 @@
+.cmn-home-hero{
+    background-color: $black-color-2;
+    color: $white-color;
+    min-height: 100vh;
+    padding: 208px 0px 80px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    @include media-breakpoint-down(xl) {
+        padding: 200px 0px 80px;
+    }
+    @include media-breakpoint-down(lg) {
+        padding: 140px 0px 60px;
+    }
+    @include media-breakpoint-down(md) {
+        //padding: 226px 0px 60px;
+        padding: 145px 0px 60px;
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background: -webkit-gradient(linear, left top, left bottom, from(#274865), to(#3F8C6C));
+        background: -o-linear-gradient(top, #274865 0%, #3F8C6C 100%);
+        background: linear-gradient(180deg, #274865 0%, #3F8C6C 100%);
+        mix-blend-mode: color;
+        opacity: 0.35;
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($black-color-2, 0.5);
+        z-index: 1;
+    }
+    .divImg{
+        position: absolute;
+        left: 0;
+        top:0;
+        width:100%;
+        height: 100%;
+    }
+    .container{
+        position: relative;
+        z-index: 2;
+    }
+    h1, .h1{
+        color:$white-color;
+        margin-bottom: 40px;
+    }
+    .goto-next{
+        margin-top:40px;
+    }
+}
+.home-about-content-section{
+    padding: 80px 0px 60px;
+    @include media-breakpoint-down(lg) {
+        padding: 60px 0;
+    }
+    h2{
+        margin-bottom: 0;
+        @include media-breakpoint-down(lg) {
+            margin-bottom: 48px;
+        }
+    }
+    p{
+        margin-bottom: 28px;
+    }
+}
+.home-cmn-left-right-section{
+    padding: 60px 0 140px;
+    @include media-breakpoint-down(lg) {
+        padding: 63px 0 120px;
+    }
+    p{
+        margin-bottom: 28px;
+    }
+}
+.counter-section{
+    padding: 60px 0;
+    @include media-breakpoint-down(xl) {
+        padding: 60px 0 36px;
+    }
+    .row{
+        > .col,
+        > [class*="col-"] {
+            &:not(:last-child){
+                .counter-block{
+                    border-right: 1px solid $gray-color-2;
+                }
+            }
+            @include media-breakpoint-down(xl) {
+                margin-bottom: 24px;
+                &:nth-child(even){
+                    .counter-block{
+                        border-right: 0;
+                    }
+                }
+            }
+            @include media-breakpoint-down(md) {
+                &:nth-child(odd){
+                    .counter-block{
+                        border-right: 0;
+                    }
+                }
+                &:not(:last-child){
+                    padding-bottom: 24px;
+                    border-bottom: 1px solid $gray-color-2;
+                }
+            }
+        }
+    }
+    .counter-block{
+        padding:32px 24px;
+       .text-16{
+            color:$black-color-2;
+       }
+    }
+}

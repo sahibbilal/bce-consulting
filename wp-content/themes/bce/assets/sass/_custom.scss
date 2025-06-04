@@ -1,0 +1,290 @@
+// Font Family
+$font-body: 'Source Sans Pro', sans-serif;
+$font-inter: 'Inter', sans-serif;
+
+// Fluid Fonts
+$min_width: 375px;
+$max_width: 1440px;
+$min_font: 20px;
+$max_font: 22px;
+
+@mixin body-font {
+  font-family: $font-body;
+  font-weight: 400;
+  line-height: 1.45;
+  color: $body-color;
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+}
+
+// Font-size as h1-h6 headings
+
+//big number
+@mixin big-number {
+  font-family: $font-inter;
+  font-weight: normal;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 60px;
+  font-size: 74px;
+  @include media-breakpoint-down(md) {
+    margin-bottom: 32px;
+  }
+}
+
+//display 
+@mixin display {
+  font-family: $font-body;
+  font-weight: normal;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 60px;
+  @include fluid-type($min_width, $max_width, 52px, 74px);
+  @include media-breakpoint-down(md) {
+    margin-bottom: 32px;
+    line-height: 1.11;
+  }
+}
+
+//h1
+@mixin font-xl {
+  font-family: $font-body;
+  font-weight: normal;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+  margin-bottom: 40px;
+  color:$black-color-2;
+  @include fluid-type($min_width, $max_width, 40px, 64px);
+  @include media-breakpoint-down(md) {
+    margin-bottom: 28px;
+    line-height: 1.15;
+  }
+}
+
+//h2
+@mixin font-lg {
+  font-family: $font-body;
+  font-weight: normal;
+  letter-spacing: -0.02em;
+  line-height:1.12;
+  margin-bottom: 28px;
+  color:$black-color-2;
+  @include fluid-type($min_width, $max_width, 36px, 48px);
+  @include media-breakpoint-down(md) {
+    line-height: 1.18;
+  }
+}
+
+//h3
+@mixin font-md { 
+  font-family: $font-body;
+  font-weight: normal;
+  line-height: 1.158;
+  margin-bottom: 24px;
+  color:$black-color-2;
+  @include fluid-type($min_width, $max_width, 32px, 40px);
+  @include media-breakpoint-down(md) {
+    line-height: 1.186;
+  }
+}
+
+//h4
+@mixin font-sm {
+  font-family: $font-body;
+  font-weight: 600;
+  line-height: 1.18;
+  margin-bottom: 24px;
+  color:$black-color-2;
+  @include fluid-type($min_width, $max_width, 20px, 32px);
+  @include media-breakpoint-down(md) {
+    line-height: 1.5;
+  }
+}
+
+//h5
+@mixin font-xs {
+  font-family: $font-body;
+  font-weight: 600;
+  line-height: 1.18;
+  margin-bottom: 16px; 
+  color:$black-color-2;
+  @include fluid-type($min_width, $max_width, 18px, 26px);
+  @include media-breakpoint-down(md) {
+    line-height: 1.55;
+  }
+}
+
+//h6
+@mixin font-xxs {
+  font-family: $font-inter;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.16em;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  color:$black-color-2;
+  @include fluid-type($min_width, $max_width, 15px, 15px);
+}
+
+// Text-22
+@mixin text-22 {
+  font-family: $font-body;
+  line-height: 1.45;
+  @include fluid-type($min_width, $max_width, 20px, 22px);
+}
+
+// Text-20
+@mixin text-20 {
+  font-family: $font-body;
+  line-height: 1.45;
+  @include fluid-type($min_width, $max_width, 20px, 20px);
+}
+
+// Text-18
+@mixin text-18 {
+  font-family: $font-body;
+  line-height: 1.389;
+  @include fluid-type($min_width, $max_width, 18px, 18px);
+}
+
+// Text-16
+@mixin text-16 {
+  font-family: $font-body;
+  font-size: 16px;
+  line-height: 1.312;
+}
+
+// Text-14
+@mixin text-14 {
+  font-family: $font-body;
+  font-size: 14px;
+  line-height: 1.45;
+}
+// Text-12
+@mixin text-12 {
+  font-family: $font-inter;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+// Other Mixing
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin opacity($opacity) {
+  -webkit-opacity: $opacity;
+  -moz-opacity: $opacity;
+  -o-opacity: $opacity;
+  -m-opacity: $opacity;
+  opacity: $opacity;
+}
+
+@mixin transition($seconds) {
+  -webkit-transition: all $seconds ease-out;
+  -moz-transition: all $seconds ease-out;
+  -ms-transition: all $seconds ease-out;
+  -o-transition: all $seconds ease-out;
+  transition: all $seconds ease-out;
+}
+
+@mixin trans-anim-none {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+@mixin space-none {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin app-none {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+
+@mixin point-none {
+  -webkit-pointer-events: none;
+  -moz-pointer-events: none;
+  -o-pointer-events: none;
+  -ms-pointer-events: none;
+  pointer-events: none;
+}
+
+// Background properties
+@mixin bg-cmn {
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin bg-parallax {
+  background-attachment: fixed;
+  @include bg-cmn;
+}
+
+// Transform Formula
+
+@mixin transform ($origin) {
+	-moz-transform: $origin;
+	-o-transform: $origin;
+	-ms-transform: $origin;
+	-webkit-transform: $origin;
+	transform: $origin;
+}
+
+// Transform None Formula
+
+@mixin transform-none {
+    -moz-transform: none;
+    -o-transform: none;
+    -ms-transform: none;
+    -webkit-transform: none;
+    transform: none;
+}
+
+// Box Shadow Formula
+// Ex: @include box-shadow(1px, 1px, 1px, 1px, #000000);
+@mixin box-shadow($box-shadow...) {
+  -webkit-box-shadow: $box-shadow;
+  -moz-box-shadow: $box-shadow;
+   -ms-box-shadow: $box-shadow;
+    -o-box-shadow: $box-shadow;
+     box-shadow: $box-shadow;
+}
+//animation
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  animation: #{$str};      
+}
+//animation name 
+@mixin animation-name($animationName){
+  -webkit-animation-name:$animationName;
+  animation-name:$animationName;
+}
+
+// Animation Keyframe Formula
+@mixin keyframes($animation-name) {
+	@-webkit-keyframes #{$animation-name} {
+		@content;
+	}
+	@-moz-keyframes #{$animation-name} {
+		@content;
+	}  
+	@-ms-keyframes #{$animation-name} {
+		@content;
+	}
+	@-o-keyframes #{$animation-name} {
+		@content;
+	}  
+	@keyframes #{$animation-name} {
+		@content;
+	}
+}

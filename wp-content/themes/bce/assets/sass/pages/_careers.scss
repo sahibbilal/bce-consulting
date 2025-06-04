@@ -1,0 +1,131 @@
+.short-career-intro{
+    padding: 80px 0px 60px;
+    @include media-breakpoint-down(lg) {
+        padding: 80px 0px 40px;
+    }
+    h2{
+        margin-bottom: 0px;
+        span{
+            color: $primary-color;
+        }
+    }
+}
+
+.company-gallery{
+    padding: 60px 0px;
+    @include media-breakpoint-down(lg) {
+        padding: 40px 0px;
+    }
+    .gallery-slider{
+        .slick-list{
+            margin: 0px -24px;
+            @include media-breakpoint-down(lg) {
+                margin: 0px;
+            }
+        }
+        .gallery-items{
+            padding: 0 24px;
+            @include media-breakpoint-down(lg) {
+                padding: 0px;
+            }
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+.career-zig-zag{
+    padding: 60px 0px;
+    @include media-breakpoint-down(lg) {
+        padding: 40px 0px;
+    }
+}
+
+.opportunities{
+    padding: 60px 0px 120px;
+    @include media-breakpoint-down(lg) {
+        padding: 40px 0px 80px;
+    }
+    .h1{
+        color: $primary-color;
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 48px;
+        }
+    }
+    .job-listing{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 32px 0px;
+        border-top: 1px solid $black-color-1;
+        @include media-breakpoint-down(md) {
+            display: block;
+            padding: 24px 0px;
+        }
+        &:hover{
+            a{
+                color: $gray-color-5;
+            }
+        }
+    }
+    .job-location{
+        .badge + .badge{
+            margin-left: 5px;
+        }
+    }
+    .direct-mail{
+        margin-top: 60px;
+        @include media-breakpoint-down(lg) {
+            margin-top: 40px;
+        }
+        p{
+            margin-bottom: 0px;
+        }
+        a{
+            @extend .btn;
+            @extend .btn-link;
+        }
+    }
+}
+
+.careers-detail{
+    padding: 80px 0px 90px;
+    @include media-breakpoint-down(lg) {
+        padding: 80px 0px 60px;
+    }
+    .job-title{
+        margin-bottom: 80px;
+        @include media-breakpoint-down(lg) {
+            margin-bottom: 40px;
+        }
+        span{
+            color: $primary-color;
+            margin-bottom: 8px;
+            display: block;
+        }
+        h1{
+            margin-bottom: 0px;
+        }
+    }
+    .apply-link{
+        a{
+            @extend .btn;
+            @extend .btn-link;
+        }
+    }
+    .job-desc{
+        h3{
+            margin-bottom: 28px;
+        }
+        ul{
+            padding-left: 15px;
+            li{
+                &:last-child{
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+}

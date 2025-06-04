@@ -1,0 +1,262 @@
+.cmn-inner-hero{
+    background-color: $black-color-2;
+    color: $white-color;
+    min-height: 524px;
+    padding: 208px 0px 140px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    @include media-breakpoint-down(xl) {
+        padding: 140px 0px;
+    }
+    @include media-breakpoint-down(lg) {
+        padding: 120px 0px;
+        min-height: 500px;
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: $black-color-2, $alpha: 0.65);
+        z-index: 0;
+    }
+    .container{
+        position: relative;
+        z-index: 1;
+    }
+    .h6{
+        color: $secondary-color;
+        margin-bottom: 8px;
+        display: block;
+    }
+    h1{
+        margin-bottom: 0px;
+        color: $white-color;
+        span{
+            color: $blue-color;
+        }
+    }
+}
+
+.cmn-spacer{
+    padding: 80px 0px 60px;
+    @include media-breakpoint-down(lg) {
+        padding: 80px 0px 40px;
+    }
+    img{
+        @include media-breakpoint-down(lg) {
+            width: 100%;
+        }
+    }
+    p{
+        &:last-child{
+            margin-bottom: 0px;
+        }
+    }
+    h2{
+        @include media-breakpoint-up(lg) {
+            margin-top: 40px;
+        }
+        span{
+            color: $primary-color;
+        }
+    }
+    .industry-left-right-section{
+        color: $black-color-2;
+    }
+}
+
+.cmn-services-card{
+    padding: 60px 0px 12px;
+    @include media-breakpoint-down(lg) {
+        padding: 40px 0px 12px;
+    }
+    .row {
+        > .col, > [class*="col-"] {
+            margin-bottom: 48px; 
+            @include media-breakpoint-down(lg) {
+                margin-bottom: 28px; 
+            }
+        }
+    }
+    .inner-card{
+        padding: 40px;
+        box-shadow: inset 0px 0px 0px 1px $gray-color-2;
+        min-height: 320px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: relative;
+        @include transition(0.3s);
+        @include media-breakpoint-down(lg) {
+            min-height: auto;
+        }
+        @include media-breakpoint-down(xl) {
+            padding: 24px;
+        }
+        &:hover{
+            box-shadow: inset 0px 0px 0px 2px $black-color-2;
+        }
+        img{
+            margin-bottom: 16px;
+            max-width: 32px;
+        }
+        .content{
+            color: $gray-color-7;
+            .h4{
+                margin-bottom: 16px;
+                a{
+                    color: $black-color-2;
+                }
+            }
+            p{
+                &:last-child{
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+}
+
+.cmn-case-insight-slider{
+    padding: 60px 0px 120px;
+    @include media-breakpoint-down(lg) {
+        padding: 60px 0px 80px;
+    }
+    h3{
+        color: $primary-color;
+        margin-bottom: 30px;
+    }
+    .insight-studie-slider{
+        position: relative;
+        padding: 48px 0px;
+        border-top: 1px solid $black-color-2;
+        border-bottom: 1px solid $black-color-2;
+        .slick-list{
+            margin: 0px -24px;
+            @include media-breakpoint-down(lg) {
+                margin: 0px;
+            }
+        }
+        .slick-track{
+            margin-left: 0px;
+        }
+        .box-items{
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0px 24px;
+            border-right: 1px solid transparent;
+            @include media-breakpoint-down(lg) {
+                border-right: none;
+                padding: 0px;
+            }
+            @include media-breakpoint-down(md) {
+                flex-direction: column;
+            }
+            .item-content{
+                flex: 0 0 50%;
+                max-width: 50%;
+                padding-right: 15px;
+                @include media-breakpoint-down(md) {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                    padding-right: 0px;
+                    display: flex;
+                    flex-direction: column;
+                    order: 2;
+                }
+                .post-date{
+                    margin-bottom: 16px;
+                    color: $gray-color-6;
+                    @include text-16;
+                }
+                .h5{
+                    margin-bottom: 0px;
+                }
+                a{
+                    color: $black-color-2;
+                    @include transition(0.4s);
+                }
+            }
+            .item-img{
+                flex: 0 0 50%;
+                max-width: 50%;
+                position: relative;
+                overflow: hidden;
+                @include media-breakpoint-down(md) {
+                    display: flex;
+                    flex-direction: column;
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                    margin-bottom: 15px;
+                    order: 0;
+                }
+                .divImg{
+                    height: 248px;
+                    width: 100%;
+                    @include transition(0.4s);
+                }
+            }
+            &:hover{
+                .item-content{
+                    a{
+                        color: $gray-color-7;
+                    }
+                }
+                .item-img{
+                    .divImg{
+                        @include transform(scale(1.1));
+                    }
+                }
+            }
+            &:nth-child(odd){
+                border-color: $gray-color-2;
+            }
+        }
+    }
+}
+
+.slider-footer{
+    margin-top: 28px;
+    .slider-nav{
+        display: flex;
+        align-items: center;
+        .slick-arrow{
+            border: none;
+            background-color: transparent;
+            font-size: 0px;
+            padding: 0px;
+            width: 29px;
+            height: 24px;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-right: 24px;
+            &.slick-prev{
+                background-image: url('../images/icon-arrow-prev-dark.svg');
+            }
+            &.slick-next{
+                background-image: url('../images/icon-arrow-next-dark.svg');
+            }
+            &:hover{
+                @include opacity(0.6);
+            }
+            &.slick-disabled{
+                @include opacity(0.4);
+                cursor: auto;
+            }
+            &:last-child{
+                margin-right: 0px;
+            }
+        }
+    }
+    .btn{
+        @include text-18;
+    }
+}

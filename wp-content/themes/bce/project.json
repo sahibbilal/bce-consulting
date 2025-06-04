@@ -1,0 +1,34 @@
+{
+  "vendor": {
+    "sass": ["./node_modules/bootstrap/scss/"],
+    "js": [
+      "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "./node_modules/waypoints/lib/jquery.waypoints.min.js",
+      "./node_modules/slick-carousel/slick/slick.min.js"
+    ],
+    "fonts": [],
+    "img": [],
+    "css": [
+      "./node_modules/slick-carousel/slick/slick.css"
+    ]
+  },
+  "app": {
+    "css": [
+      "./assets/css/animate.css",
+      "./style.css" ],
+    "sass": "./assets/sass/main.scss",
+    "js": [
+      "./assets/js/wow.min.js",
+      "./assets/js/custom.js",
+      "./assets/js/insight-filter.js"
+    ],
+    "fonts": ["./assets/fonts/*.*"],
+    "img": ["./assets/img/**/*"]
+  },
+  "dist": {
+    "js": "./assets/js/",
+    "css": "./assets/css/",
+    "fonts": "./assets/fonts/",
+    "img": "./assets/img/"
+  }
+}

@@ -1,0 +1,34 @@
+// Import Fonts:
+@import "sections/fonts";
+
+// Bootstrap variable override:
+@import "variables";
+@import "bootstrap";
+
+// Project's custom variables or mixin:
+@import "functions";
+@import "mixins";
+@import "custom";
+
+// core
+@import "core/project-sitemap";
+
+// layouts:
+@import "layout";
+@import "sections/header";
+@import "sections/footer";
+
+// pages:
+@import "pages/home";
+@import "pages/page-not-found";
+@import "pages/industries-list";
+@import "pages/insight";
+@import "pages/team";
+@import "pages/careers";
+@import "pages/about";
+@import "pages/contact";
+@import "pages/search";
+@import "pages/capabilities-detail";
+
+// Override anything at last:
+@import "overrides";

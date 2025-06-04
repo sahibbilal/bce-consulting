@@ -1,0 +1,205 @@
+{
+    "key": "group_5cdd604646770",
+    "title": "Cookie Consent",
+    "fields": [
+        {
+            "key": "field_5cdd607a2f2c2",
+            "label": "Display Cookie Consent?",
+            "name": "cc_display",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Selecting yes will display the EU Cookie Consent banner on every page until the user accepts the terms.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5cdd613c2f2c3",
+            "label": "Message",
+            "name": "cc_message",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5cdd607a2f2c2",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_5cdd61d82f2c4",
+            "label": "Button Label",
+            "name": "cc_button_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5cdd607a2f2c2",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Got It!",
+            "placeholder": "Got It!",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5cdd630e2f2c7",
+            "label": "Background Color",
+            "name": "cc_color_bkgd",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5cdd607a2f2c2",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#a32638",
+            "enable_opacity": false,
+            "return_format": "string"
+        },
+        {
+            "key": "field_5cdd63952f2c8",
+            "label": "Text Color",
+            "name": "cc_color_text",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5cdd607a2f2c2",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#FFFFFF",
+            "enable_opacity": false,
+            "return_format": "string"
+        },
+        {
+            "key": "field_5cdd63ab2f2c9",
+            "label": "Button Background Color",
+            "name": "cc_color_button_bkgd",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5cdd607a2f2c2",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#FFFFFF",
+            "enable_opacity": false,
+            "return_format": "string"
+        },
+        {
+            "key": "field_5cdd63c92f2ca",
+            "label": "Button Text Color",
+            "name": "cc_color_button_text",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5cdd607a2f2c2",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#171219",
+            "enable_opacity": false,
+            "return_format": "string"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-footer-settings"
+            }
+        ]
+    ],
+    "menu_order": 2,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1694549304
+}
